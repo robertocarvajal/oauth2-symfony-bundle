@@ -33,9 +33,9 @@
         "symfony"
     ],
     "license": "MIT",
-    "name": "authbucket/oauth2-symfony-bundle",
+    "name": "ekreative/oauth2-symfony-bundle",
     "require": {
-        "authbucket/oauth2-php": "5.1.0-alpha",
+        "ekreative/oauth2-php": "5.1.0",
         "php": ">=5.5.9",
         "symfony/framework-bundle": "~3.2",
         "symfony/monolog-bundle": "~3.0",
