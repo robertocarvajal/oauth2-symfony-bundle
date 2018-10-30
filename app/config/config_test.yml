@@ -1,2 +1,15 @@
 imports:
     - { resource: config_dev.yml }
+
+services:
+  test.security.encoder_factory:
+    alias: security.encoder_factory
+    public: true
+
+  test.AuthBucket\OAuth2\TokenType\TokenTypeHandlerFactory:
+    alias: AuthBucket\OAuth2\TokenType\TokenTypeHandlerFactory
+    public: true
+
+  test.authbucket_oauth2.model_manager.factory:
+    alias: authbucket_oauth2.model_manager.factory
+    public: true

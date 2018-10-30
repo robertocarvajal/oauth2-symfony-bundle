@@ -1,0 +1,14 @@
+api_oauth2_authorize:
+    path:           /authorize
+    defaults:       { _controller: AuthBucket\OAuth2\Controller\AuthorizationController::indexAction }
+    methods:        [ GET ]
+
+api_oauth2_token:
+    path:           /token
+    defaults:       { _controller: AuthBucket\OAuth2\Controller\TokenController::indexAction }
+    methods:        [ POST ]
+
+api_oauth2_debug:
+    path:           /debug
+    defaults:       { _controller: AuthBucket\OAuth2\Controller\DebugController::indexAction }
+    methods:        [ GET|POST ]

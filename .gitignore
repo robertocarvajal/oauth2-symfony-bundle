@@ -1,6 +1,3 @@
-build/
-composer.lock
-composer.phar
-var/cache/*
-var/logs/*
+var/
 vendor/
+/.php_cs.cache

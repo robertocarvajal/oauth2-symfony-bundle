@@ -1,0 +1,8 @@
+services:
+  AuthBucket\Bundle\OAuth2Bundle\Tests\TestBundle\DataFixtures\ORM\:
+    resource: '../../DataFixtures/ORM/*'
+    autoconfigure: true
+    autowire: true
+    public: true
+#    tags:
+#      - { name: doctrine.fixture.orm }

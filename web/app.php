@@ -2,12 +2,9 @@
 
 use Symfony\Component\HttpFoundation\Request;
 
-$loader = require_once __DIR__.'/../var/bootstrap.php';
-
-require_once __DIR__.'/../app/AppKernel.php';
+$loader = require_once __DIR__.'/../vendor/autoload.php';
 
 $kernel = new AppKernel('prod', false);
-$kernel->loadClassCache();
 
 // When using the HttpCache, you need to call the method in your front controller instead of relying on the configuration parameter
 //Request::enableHttpMethodParameterOverride();

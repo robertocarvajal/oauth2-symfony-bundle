@@ -21,6 +21,7 @@ security:
         demo_login:
             pattern:                ^/demo/login$
             anonymous:              ~
+            provider: default
 
         demo_authorize:
             pattern:                ^/demo/authorize
@@ -42,16 +43,19 @@ security:
         api_oauth2_token:
             pattern:                ^/api/oauth2/token$
             oauth2_token:           ~
+            provider:               default
 
         api_oauth2_debug:
             pattern:                ^/api/oauth2/debug$
             oauth2_resource:        ~
+            provider:               default
 
         api_resource_model:
             pattern:                ^/api/resource/model$
             oauth2_resource:
                 resource_type:      model
                 scope:              [ demoscope1 ]
+            provider:               default
 
         api_resource_debug_endpoint:
             pattern:                ^/api/resource/debug_endpoint$
@@ -61,6 +65,7 @@ security:
                 options:
                     debug_endpoint: '/api/oauth2/debug'
                     cache:          false
+            provider:               default
 
         api_resource_debug_endpoint_cache:
             pattern:                ^/api/resource/debug_endpoint/cache$
@@ -70,6 +75,7 @@ security:
                 options:
                     debug_endpoint: '/api/oauth2/debug'
                     cache:          true
+            provider:               default
 
         api_resource_debug_endpoint_invalid_options:
             pattern:                ^/api/resource/debug_endpoint/invalid_options$
@@ -79,3 +85,4 @@ security:
                 options:
                     debug_endpoint: ''
                     cache:          true
+            provider:               default

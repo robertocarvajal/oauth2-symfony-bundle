@@ -8,56 +8,58 @@
     ],
     "autoload": {
         "psr-4": {
-            "AuthBucket\\Bundle\\OAuth2Bundle\\": "src/"
+            "AuthBucket\\OAuth2\\": "src/OAuth2/",
+            "AuthBucket\\Bundle\\OAuth2Bundle\\": "src/OAuth2Bundle/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "AuthBucket\\Bundle\\OAuth2Bundle\\Tests\\": "tests/"
-        }
+            "AuthBucket\\OAuth2\\Tests\\": "tests/OAuth2",
+            "AuthBucket\\Bundle\\OAuth2Bundle\\Tests\\": "tests/OAuth2Bundle/"
+        },
+        "classmap": [ "app/AppKernel.php" ]
     },
     "description": "Symfony OAuth2Bundle",
-    "extra": {
-        "branch-alias": {
-            "dev-develop": "5.x-dev",
-            "dev-master": "5.0.x-dev"
-        }
-    },
     "homepage": "https://github.com/authbucket/oauth2-symfony-bundle",
     "keywords": [
         "oauth2",
-        "psr-1",
-        "psr-2",
-        "psr-3",
-        "psr-4",
         "symfony"
     ],
     "license": "MIT",
     "name": "ekreative/oauth2-symfony-bundle",
     "require": {
-        "ekreative/oauth2-php": "5.1.0",
-        "php": ">=5.5.9",
-        "symfony/framework-bundle": "~3.2",
-        "symfony/monolog-bundle": "~3.0",
-        "symfony/security-bundle": "~3.2"
+        "php": ">=7.2",
+        "lib-openssl": "*",
+        "symfony/framework-bundle": "^3.4|^4.0",
+        "guzzlehttp/guzzle": "^6",
+        "psr/log": "^1",
+        "symfony/security": "^3.4|^4.0",
+        "symfony/validator": "^3.4|^4.0",
+        "symfony/yaml": "^3.4|^4.1",
+        "symfony/templating": "^3.4|^4.1"
     },
     "require-dev": {
-        "doctrine/doctrine-bundle": "~1.6",
-        "doctrine/doctrine-fixtures-bundle": "~2.3",
-        "doctrine/orm": "~2.5",
         "ext-pdo_sqlite": "*",
-        "sensio/distribution-bundle": "~5.0",
-        "sensio/framework-extra-bundle": "~3.0",
-        "symfony/phpunit-bridge": "~3.2",
-        "symfony/swiftmailer-bundle": "~2.3",
-        "symfony/symfony": "~3.2",
-        "twig/extensions": "~1.0"
+        "doctrine/doctrine-bundle": "^1.9",
+        "doctrine/doctrine-fixtures-bundle": "^3.0",
+        "doctrine/orm": "^2.6",
+        "sensio/framework-extra-bundle": "^5.2",
+        "symfony/phpunit-bridge": "*",
+        "twig/extensions": "^1",
+        "doctrine/data-fixtures": "^1.0",
+        "symfony/browser-kit": "^3.4|^4.0",
+        "symfony/css-selector": "^3.4|^4.0",
+        "symfony/finder": "^3.4|^4.0",
+        "symfony/form": "^3.4|^4.0",
+        "symfony/process": "^3.4|^4.0",
+        "symfony/translation": "^3.4|^4.0",
+        "symfony/twig-bridge": "^3.4|^4.0",
+        "phpunit/phpunit": "^7",
+        "friendsofphp/php-cs-fixer": "^2.13",
+        "symfony/monolog-bundle": "^3.3",
+        "phpstan/phpstan": "^0.10.5",
+        "symfony/security-bundle": "^3.4|^4.0",
+        "symfony/twig-bundle": "^3.4|^4.1"
     },
-    "type": "symfony-bundle",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/mcfedr/oauth2-php"
-        }
-    ]
+    "type": "symfony-bundle"
 }
