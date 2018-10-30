@@ -17,7 +17,6 @@ class AppKernel extends Kernel
         if (in_array($this->getEnvironment(), ['prod', 'dev', 'test'])) {
             $bundles[] = new Symfony\Bundle\TwigBundle\TwigBundle();
             $bundles[] = new Doctrine\Bundle\DoctrineBundle\DoctrineBundle();
-            $bundles[] = new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle();
             $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
             $bundles[] = new AuthBucket\Bundle\OAuth2Bundle\Tests\TestBundle\TestBundle();
 
