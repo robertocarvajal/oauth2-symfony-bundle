@@ -1,25 +1,24 @@
-AuthBucket\\Bundle\\OAuth2Bundle
+OAuth2Bundle
 ================================
 
-[![Build Status](https://travis-ci.org/authbucket/oauth2-symfony-bundle.svg?branch=master)](https://travis-ci.org/authbucket/oauth2-symfony-bundle)
-[![Coverage Status](https://coveralls.io/repos/authbucket/oauth2-symfony-bundle/badge.svg?branch=master&service=github)](https://coveralls.io/github/authbucket/oauth2-symfony-bundle?branch=master)
-[![Dependency Status](https://www.versioneye.com/php/authbucket:oauth2-symfony-bundle/dev-master/badge.svg)](https://www.versioneye.com/php/authbucket:oauth2-symfony-bundle/dev-master)
-[![Latest Stable Version](https://poser.pugx.org/authbucket/oauth2-symfony-bundle/v/stable.svg)](https://packagist.org/packages/authbucket/oauth2-symfony-bundle)
-[![Total Downloads](https://poser.pugx.org/authbucket/oauth2-symfony-bundle/downloads.svg)](https://packagist.org/packages/authbucket/oauth2-symfony-bundle)
-[![License](https://poser.pugx.org/authbucket/oauth2-symfony-bundle/license.svg)](https://packagist.org/packages/authbucket/oauth2-symfony-bundle)
+[![Build Status](https://travis-ci.org/ekreative/oauth2-symfony-bundle.svg?branch=master)](https://travis-ci.org/ekreative/oauth2-symfony-bundle)
+[![Latest Stable Version](https://poser.pugx.org/ekreative/oauth2-symfony-bundle/v/stable.svg)](https://packagist.org/packages/ekreative/oauth2-symfony-bundle)
+[![License](https://poser.pugx.org/ekreative/oauth2-symfony-bundle/license.svg)](https://packagist.org/packages/ekreative/oauth2-symfony-bundle)
 
-[AuthBucket\\Bundle\\OAuth2Bundle](http://oauth2-symfony-bundle.authbucket.com/) is a Symfony Bundle, which integrate [AuthBucket\\OAuth2](http://oauth2-php.authbucket.com/) as easy as possible into your [Symfony](http://symfony.com) Project.
+The primary goal of OAuth2Bundle is to develop a standards compliant [RFC6749 OAuth2.0](http://tools.ietf.org/html/rfc6749) library
+
+This library bundle with a [Symfony](http://symfony.com) based Bundle for unit test and demo purpose. Installation and usage can refer as below.
 
 Installation
 ------------
 
-Simply add a dependency on `authbucket/oauth2-symfony-bundle` to your project's `composer.json` file if you use [Composer](http://getcomposer.org/) to manage the dependencies of your project.
+Simply add a dependency on `ekreative/oauth2-symfony-bundle` to your project's `composer.json` file if you use [Composer](http://getcomposer.org/) to manage the dependencies of your project.
 
 Here is a minimal example of a `composer.json`:
 
     {
         "require": {
-            "authbucket/oauth2-symfony-bundle": "~5.0"
+            "ekreative/oauth2-symfony-bundle": "^6.0"
         }
     }
 
@@ -172,44 +171,29 @@ If authorization server is hosting somewhere else, you can protect your local re
 Demo
 ----
 
-The demo is based on [Symfony](http://symfony.com/) and [AuthBucketOAuth2Bundle](https://github.com/authbucket/oauth2-symfony-bundle/blob/master/src/AuthBucketOAuth2Bundle.php). Read though [Demo](http://oauth2-symfony-bundle.authbucket.com/demo) for more information.
+The demo is based on [Symfony](http://symfony.com/) and [AuthBucketOAuth2Bundle](https://github.com/ekreative/oauth2-symfony-bundle/blob/master/src/OAuth2Bundle/AuthBucketOAuth2Bundle.php). Read though Demo for more information.
 
-You may also run the demo locally. Open a console and execute the following command to install the latest version in the `oauth2-symfony-bundle` directory:
+You may run the demo locally. Open a console and execute the following command to install the latest version in the `oauth2-symfony-bundle` directory:
 
-    $ composer create-project authbucket/oauth2-symfony-bundle authbucket/oauth2-symfony-bundle "~5.0"
+    $ composer create-project ekreative/oauth2-symfony-bundle ekreative/oauth2-symfony-bundle "^6.0"
 
 Then use the PHP built-in web server to run the demo application:
 
-    $ cd authbucket/oauth2-symfony-bundle
+    $ cd ekreative/oauth2-symfony-bundle
     $ ./bin/console server:run
-
-If you get the error `There are no commands defined in the "server" namespace.`, then you are probably using PHP 5.3. That's ok! But the built-in web server is only available for PHP 5.4.0 or higher. If you have an older version of PHP or if you prefer a traditional web server such as Apache or Nginx, read the [Configuring a web server](http://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html) article.
 
 Open your browser and access the <http://127.0.0.1:8000> URL to see the Welcome page of demo application.
 
 Also access <http://127.0.0.1:8000/admin/refresh_database> to initialize the bundled SQLite database with user account `admin`:`secrete`.
 
-Documentation
--------------
-
-OAuth2Bundle's documentation is built with [Sami](https://github.com/fabpot/Sami) and publicly hosted on [GitHub Pages](http://authbucket.github.io/oauth2-symfony-bundle).
-
-To built the documents locally, execute the following command:
-
-    $ sami.php update .sami.php
-
-Open `build/sami/index.html` with your browser for the documents.
-
 Tests
 -----
 
-This project is coverage with [PHPUnit](http://phpunit.de/) test cases; CI result can be found from [Travis CI](https://travis-ci.org/authbucket/oauth2-symfony-bundle); code coverage report can be found from [Coveralls](https://coveralls.io/r/authbucket/oauth2-symfony-bundle).
+This project is coverage with [PHPUnit](http://phpunit.de/) test cases; CI result can be found from [Travis CI](https://travis-ci.org/ekreative/oauth2-symfony-bundle);
 
 To run the test suite locally, execute the following command:
 
-    $ phpunit -c phpunit.xml.dist
-
-Open `build/logs/html` with your browser for the coverage report.
+    $ ./vendor/bin/phpunit
 
 References
 ----------
@@ -226,5 +210,3 @@ License
 -------
 
 -   Code released under [MIT](https://github.com/authbucket/oauth2-symfony-bundle/blob/master/LICENSE)
--   Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
-
