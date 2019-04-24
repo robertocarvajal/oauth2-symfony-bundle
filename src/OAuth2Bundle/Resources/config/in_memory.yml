@@ -1,0 +1,10 @@
+parameters:
+    authbucket_oauth2.model:
+        access_token:   AuthBucket\OAuth2\Model\AccessToken
+
+services:
+    authbucket_oauth2.model_manager.factory:
+        class: AuthBucket\OAuth2\Model\ModelManagerFactory
+        arguments:
+            - "%authbucket_oauth2.model%"
+        public: true
