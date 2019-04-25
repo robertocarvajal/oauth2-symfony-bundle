@@ -59,6 +59,14 @@ class AuthBucketOAuth2Extension extends Extension
         }
         unset($config['user_provider']);
 
+	    $encoderFactory = $config['encoder_factory'] ?: null;
+	    if ($encoderFactory) {
+		    $encoderFactoryReference = new Reference($encoderFactory);
+		    $container->getDefinition(GrantTypeHandlerFactory::class)
+		              ->replaceArgument(1, $encoderFactoryReference);
+	    }
+	    unset($config['encoder_factory']);
+
         foreach (array_filter($config) as $key => $value) {
             $container->setParameter('authbucket_oauth2.'.$key, $value);
         }

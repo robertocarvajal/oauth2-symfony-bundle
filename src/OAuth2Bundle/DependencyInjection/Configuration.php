@@ -33,6 +33,7 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->scalarNode('driver')->defaultNull()->end()
                 ->scalarNode('user_provider')->defaultNull()->end()
+                ->scalarNode('encoder_factory')->defaultNull()->end()
                 ->arrayNode('model')
                     ->prototype('scalar')->end()
                 ->end()
