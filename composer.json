@@ -26,7 +26,7 @@
         "symfony"
     ],
     "license": "MIT",
-    "name": "ekreative/oauth2-symfony-bundle",
+    "name": "robertocarvajal/oauth2-symfony-bundle",
     "require": {
         "php": ">=7.2",
         "lib-openssl": "*",
