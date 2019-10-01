@@ -14,10 +14,9 @@ namespace AuthBucket\OAuth2\Symfony\Component\Security\Http\Firewall;
 use AuthBucket\OAuth2\Exception\InvalidRequestException;
 use AuthBucket\OAuth2\Symfony\Component\Security\Core\Authentication\Token\ClientCredentialsToken;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
-use Symfony\Component\Security\Http\Firewall\ListenerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
@@ -25,7 +24,7 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
  *
  * @author Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
  */
-class TokenListener implements ListenerInterface
+class TokenListener
 {
     protected $providerKey;
     protected $tokenStorage;
@@ -50,7 +49,12 @@ class TokenListener implements ListenerInterface
         $this->clientTokenRoles = $clientTokenRoles;
     }
 
-    public function handle(GetResponseEvent $event)
+    public function __invoke(RequestEvent $event)
+    {
+        $this->handle($event);
+    }
+
+    public function handle(RequestEvent $event)
     {
         $request = $event->getRequest();
 
