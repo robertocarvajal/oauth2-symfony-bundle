@@ -54,7 +54,7 @@
         "symfony/translation": "^3.4|^4.1",
         "symfony/twig-bridge": "^3.4|^4.1",
         "phpunit/phpunit": "^7",
-        "friendsofphp/php-cs-fixer": "^2.13",
+        "friendsofphp/php-cs-fixer": "^2.15",
         "symfony/monolog-bundle": "^3.3",
         "phpstan/phpstan": "^0.10.5",
         "symfony/security-bundle": "^3.4|^4.1",
